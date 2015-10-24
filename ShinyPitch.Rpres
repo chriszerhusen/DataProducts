@@ -1,0 +1,40 @@
+Exploring Histogram Bin Size with Shiny
+========================================================
+author: Chris Zerhusen
+date: 
+
+Benefits of a Shiny Application
+========================================================
+
+- Simple and clean interface.
+- Interactive Graphics
+- Easy to create and update
+
+Application Overview
+========================================================
+
+This application provides users with an interactive example of the effect of
+histogram bin size on the overall shape of a plot.
+
+Choosing a bin size is an important component of making useful histograms.
+
+Being able to quickly and easily experiment with this feature allows users to 
+better understand the importance and power of this aspect of their plots.
+
+Real Time Updates Using R Code
+========================================================
+
+```{r}
+data("airquality");library(ggplot2)
+
+g <- ggplot(data=airquality)
+g + geom_histogram(aes(Temp), color="black", fill="steelblue",
+        binwidth=41/10) + ggtitle("Air Temperature in New York")
+```
+
+Get Started Now!
+========================================================
+
+This app is ready to use at:
+
+https://chriszerhusen.shinyapps.io/DataProducts
